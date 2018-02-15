@@ -7,13 +7,18 @@ namespace SingletonCSharp
         public static void WriteRandomNumbers()
         {
             var random = GlobalRandom.GetInstance();
-            Console.WriteLine(random.Next());
+            DoSomethingRandom(random);
 
             var sameRandom = GlobalRandom.GetInstance();
-            Console.WriteLine(random.Next());
+            DoSomethingRandom(sameRandom);
 
             var randomsAreTheSame = ReferenceEquals(random, sameRandom);
             Console.WriteLine($"Randoms are the same: {randomsAreTheSame}");
+        }
+
+        private static void DoSomethingRandom(GlobalRandom random)
+        {
+            Console.WriteLine(random.Next());
         }
     }
 
