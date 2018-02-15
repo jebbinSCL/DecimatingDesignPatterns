@@ -1,24 +1,20 @@
 ﻿open System
 
-module GlobalRandom = 
-
-    type GlobalRandom(seed: int) = 
-        inherit Random(seed)
-
-    let instance = new GlobalRandom(11123123)
+type GlobalRandom(seed: int) = 
+    inherit Random(seed)
+    static let instance = new GlobalRandom(11123123)
+    static member Instance = instance
 
 module RandomUser = 
-    open GlobalRandom
-
     let DoSomethingRandom (instance: GlobalRandom) =
         Console.WriteLine(instance.Next())
 
     let writeRandomNumbers () = 
 
-        let random = GlobalRandom.instance
+        let random = GlobalRandom.Instance
         DoSomethingRandom random
 
-        let sameRandom = GlobalRandom.instance
+        let sameRandom = GlobalRandom.Instance
         DoSomethingRandom sameRandom
     
         let randomsAreTheSame = random = sameRandom
