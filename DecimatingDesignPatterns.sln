@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonCSharp", "SingletonCSharp\SingletonCSharp.csproj", "{59E29142-7ED9-46F6-BAB8-4C4C3DADC3ED}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SingletonFsharp", "SingletonFsharp\SingletonFsharp.fsproj", "{FE9CB38A-72B1-47B8-876A-EC8A4619F18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodCSharp", "FactoryMethodCSharp\FactoryMethodCSharp.csproj", "{1ADBC2C6-F94C-4AED-A766-B6337825B7C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethodCSharp", "FactoryMethodCSharp\FactoryMethodCSharp.csproj", "{1ADBC2C6-F94C-4AED-A766-B6337825B7C8}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SingletonFSharpNatural", "SingletonFSharpNatural\SingletonFSharpNatural.fsproj", "{1193B676-D397-4B1D-9FFB-30BB5D4BEE78}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SingletonFSharpNatural", "SingletonFSharpNatural\SingletonFSharpNatural.fsproj", "{1193B676-D397-4B1D-9FFB-30BB5D4BEE78}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SingletonFSharpNaturalTwo", "SingletonFSharpNaturalTwo\SingletonFSharpNaturalTwo.fsproj", "{E742944F-40DD-4849-9ED8-304C81A6FCBE}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SingletonFSharpNaturalTwo", "SingletonFSharpNaturalTwo\SingletonFSharpNaturalTwo.fsproj", "{E742944F-40DD-4849-9ED8-304C81A6FCBE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FactoryMethodFSharp", "FactoryMethodFSharp\FactoryMethodFSharp.fsproj", "{5ED917A6-084C-483E-9C02-3FA103397504}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E742944F-40DD-4849-9ED8-304C81A6FCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E742944F-40DD-4849-9ED8-304C81A6FCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E742944F-40DD-4849-9ED8-304C81A6FCBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED917A6-084C-483E-9C02-3FA103397504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED917A6-084C-483E-9C02-3FA103397504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED917A6-084C-483E-9C02-3FA103397504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED917A6-084C-483E-9C02-3FA103397504}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
