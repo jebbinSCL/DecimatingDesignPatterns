@@ -1,6 +1,5 @@
 ﻿open System
 
-[<RequireQualifiedAccess>]
 module GlobalRandom = 
 
     type GlobalRandom(seed: int) = 
@@ -8,22 +7,25 @@ module GlobalRandom =
 
     let instance = new GlobalRandom(11123123)
 
-let DoSomethingRandom (instance: GlobalRandom.GlobalRandom) =
-    Console.WriteLine(instance.Next())
+module RandomUser = 
+    open GlobalRandom
 
-let writeRandomNumbers () = 
+    let DoSomethingRandom (instance: GlobalRandom) =
+        Console.WriteLine(instance.Next())
 
-    let random = GlobalRandom.instance
-    DoSomethingRandom random
+    let writeRandomNumbers () = 
 
-    let sameRandom = GlobalRandom.instance
-    DoSomethingRandom sameRandom
+        let random = GlobalRandom.instance
+        DoSomethingRandom random
+
+        let sameRandom = GlobalRandom.instance
+        DoSomethingRandom sameRandom
     
-    let randomsAreTheSame = random = sameRandom
-    Console.WriteLine(sprintf "Randoms are the same: %b" randomsAreTheSame)
+        let randomsAreTheSame = random = sameRandom
+        Console.WriteLine(sprintf "Randoms are the same: %b" randomsAreTheSame)
 
 [<EntryPoint>]
 let main _ =
-    writeRandomNumbers ()
+    RandomUser.writeRandomNumbers ()
     Console.ReadLine() |> ignore
     0 
