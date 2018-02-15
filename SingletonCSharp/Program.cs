@@ -24,8 +24,10 @@ namespace SingletonCSharp
 
     class GlobalRandom : Random
     {
-        private static GlobalRandom instance = new GlobalRandom(11123123);
+        private static readonly GlobalRandom instance = new GlobalRandom(11123123);
+
         private GlobalRandom(int seed) : base(seed) { }
+
         public static GlobalRandom GetInstance()
         {
             return instance;
