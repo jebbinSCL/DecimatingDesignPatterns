@@ -1,7 +1,6 @@
 ﻿open System
 
 [<RequireQualifiedAccess>]
-[<AutoOpen>]
 module GlobalRandom = 
 
     type GlobalRandom(seed: int) = 
@@ -9,13 +8,16 @@ module GlobalRandom =
 
     let instance = new GlobalRandom(11123123)
 
+let DoSomethingRandom (instance: GlobalRandom.GlobalRandom) =
+    Console.WriteLine(instance.Next())
+
 let writeRandomNumbers () = 
 
     let random = GlobalRandom.instance
-    Console.WriteLine(instance.Next())
+    DoSomethingRandom random
 
     let sameRandom = GlobalRandom.instance
-    Console.WriteLine(instance.Next())
+    DoSomethingRandom sameRandom
     
     let randomsAreTheSame = random = sameRandom
     Console.WriteLine(sprintf "Randoms are the same: %b" randomsAreTheSame)
